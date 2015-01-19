@@ -6,7 +6,7 @@ from flask.ext.script import Manager, Shell
 from flask.ext.migrate import Migrate, MigrateCommand
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
-print os.getenv('FLASK_CONFIG')
+print 'in manage.py', os.getenv('FLASK_CONFIG')
 manager = Manager(app)
 migrate = Migrate(app, db)
 

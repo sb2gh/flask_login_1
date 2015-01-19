@@ -23,7 +23,7 @@ class DevelopmentConfig(Config):
     DEBUG = True
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'data-dev.sqlite')
-    print os.environ['DEV_DATABASE_URL']
+    print 'in config', os.environ['DEV_DATABASE_URL']
 
 
 class TestingConfig(Config):
